@@ -23,8 +23,7 @@
         data: function() {
             return {
                 tag: null,
-                focused: false,
-                tags: ['Москва', 'Алматы', 'Актобе']
+                focused: false
             }
         },
 
@@ -32,6 +31,10 @@
             placeholder: {
                 type: String,
                 default: 'Type here...'
+            },
+            tags: {
+                type: Array,
+                default: () => []
             }
         },
 
@@ -69,8 +72,8 @@
     .tagify-container {
         cursor: text;
         padding: 0.25rem 0;
+        background-color: #fff;
         transition: border-color .4s;
-        background-color: transparent;
         border-bottom: 2px solid #efefef;
 
         .tagify {
@@ -130,7 +133,7 @@
         }
 
         &.active {
-            border-color: #2196F3;
+            border-color: #2196f3;
         }
     }
 </style>
