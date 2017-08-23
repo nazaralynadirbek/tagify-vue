@@ -10134,7 +10134,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
 // imports
-exports.push([module.i, "@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);", ""]);
+exports.push([module.i, "@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);", ""]);
 
 // module
 exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25rem 0;\n  background-color: #fff;\n  transition: border-color .4s;\n  border-bottom: 2px solid #efefef;\n}\n.tagify-container .tagify-tag, .tagify-container .tagify-input {\n    float: left;\n    font-size: 14px;\n    font-family: 'Helvetica', sans-serif;\n}\n.tagify-container .tagify-tag {\n    color: #444;\n    height: 32px;\n    cursor: pointer;\n    padding: 0 12px;\n    line-height: 32px;\n    border-radius: 16px;\n    margin: 2px 12px 2px 0;\n    background-color: #efefef;\n}\n.tagify-container .tagify-tag-animation-enter-active {\n      transition: all .4s;\n}\n.tagify-container .tagify-tag-animation-enter {\n      opacity: 0;\n      transform: translateY(-15px);\n}\n.tagify-container .tagify-tag .icon {\n      font-size: 14px;\n      margin-left: 6px;\n      font-style: normal;\n      font-weight: normal;\n      padding: 6px 0 6px 6px;\n}\n.tagify-container .tagify-tag .icon:hover {\n        font-weight: bold;\n}\n.tagify-container .tagify-input {\n    padding: 0;\n    height: 32px;\n    border: none;\n    outline: none;\n    margin: 2px 0;\n}\n.tagify-container .tagify:after {\n    content: '';\n    clear: both;\n    display: block;\n}\n.tagify-container.active {\n    border-color: #2196f3;\n}\n", ""]);

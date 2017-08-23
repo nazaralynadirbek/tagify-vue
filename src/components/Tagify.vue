@@ -67,7 +67,7 @@
 </script>
 
 <style lang="scss">
-    @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+    @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
     .tagify-container {
         cursor: text;
