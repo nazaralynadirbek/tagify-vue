@@ -9947,7 +9947,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(10), "");
 
 // module
-exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #f9f9f9;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #383838;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #999;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          font-size: 14px;\n          margin-right: 20px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    font-size: 14px;\n    padding: 20px 0;\n    line-height: 20px;\n    text-align: center;\n    background-color: #efefef;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #f9f9f9;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #383838;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #999;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          font-size: 14px;\n          margin-right: 20px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    font-size: 14px;\n    padding: 20px 0;\n    line-height: 20px;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer a {\n      color: #2e64c3;\n      text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -10345,7 +10345,12 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
 },function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "footer"
-  }, [_c('p', [_vm._v("I should write there something for good look, but i have nothing to")])])
+  }, [_c('p', [_vm._v("inspired in "), _c('a', {
+    attrs: {
+      "href": "https://github.com/Gbuomprisco/ngx-chips",
+      "target": "_blank"
+    }
+  }, [_vm._v("ngx-chips")])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

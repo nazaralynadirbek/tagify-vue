@@ -25,7 +25,7 @@
                     tagify(:tags='tags',
                            placeholder='Type your tags here')
         .footer
-            p I should write there something for good look, but i have nothing to
+            p inspired in #[a(href='https://github.com/Gbuomprisco/ngx-chips', target='_blank') ngx-chips]
 </template>
 
 <script>
@@ -125,6 +125,11 @@
             line-height: 20px;
             text-align: center;
             background-color: #efefef;
+
+            a {
+                color: #2e64c3;
+                text-decoration: none;
+            }
         }
     }
 </style>
