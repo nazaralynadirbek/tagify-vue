@@ -24,6 +24,15 @@
                     h2  Basic component
                     tagify(:tags='tags',
                            placeholder='Type your tags here')
+
+                    code &#60;tagify :tags='tags' placeholder='Type your tags here'&#62;&#60;/tagify&#62;
+                .group
+                    h2  Confirm removing
+                    tagify(:tags='tags_confirm',
+                           placeholder='Type your tags here',
+                           confirm)
+
+                    code &#60;tagify :tags='tags' placeholder='Type your tags here' confirm&#62;&#60;/tagify&#62;
         .footer
             p inspired in #[a(href='https://github.com/Gbuomprisco/ngx-chips', target='_blank') ngx-chips]
 </template>
@@ -35,7 +44,8 @@
         data: function() {
             return {
                 message: 'Docs',
-                tags: ['Moscow', 'Almaty', 'London']
+                tags: ['Moscow', 'Almaty', 'London'],
+                tags_confirm: ['Russia', 'Kazakhstan']
             }
         },
         components: {
@@ -57,7 +67,7 @@
                 text-align: center;
                 margin-bottom: 40px;
                 padding-bottom: 40px;
-                background-color: #f9f9f9;
+                background-color: #4b86ec;
 
                 .top {
                     color: #fff;
@@ -76,11 +86,11 @@
                     padding: 40px 0;
 
                     h1 {
-                        color: #383838;
+                        color: #fff;
                         font-weight: 400;
                     }
                     p {
-                        color: #999;
+                        color: #fff;
                         font-size: 14px;
                         font-weight: 300;
                     }
@@ -112,6 +122,9 @@
                         color: #383838;
                         font-size: 16px;
                         font-weight: 400;
+                        margin-bottom: 20px;
+                    }
+                    .tagify-container {
                         margin-bottom: 20px;
                     }
                 }

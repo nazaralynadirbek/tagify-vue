@@ -1,10 +1,11 @@
 <template lang="pug">
-    .tagify-container(@click='focus', v-bind:class='{ active : focused }')
+    .tagify-container(@click='focus', :class='{ active : focused }')
         .tagify
             transition-group(tag='div', name='tagify-tag-animation')
                 span(class='tagify-tag',
                      v-for='(tag, index) in tags',
-                     v-bind:key='index') {{ tag }}
+                     :key='index',
+                     :class='{ active : selected === index }') {{ tag }}
 
                      i(class='icon ion-ios-close-outline',
                        @click='splice(index)')
@@ -15,6 +16,7 @@
                   v-bind:placeholder='placeholder',
                   @keyup.enter='push',
                   @keydown.delete='pop',
+                  @focus='focus',
                   @blur='blur')
 </template>
 
@@ -23,7 +25,8 @@
         data: function() {
             return {
                 tag: null,
-                focused: false
+                focused: false,
+                selected: null
             }
         },
 
@@ -35,6 +38,10 @@
             tags: {
                 type: Array,
                 default: () => []
+            },
+            confirm: {
+                type: Boolean,
+                default: false,
             }
         },
 
@@ -43,9 +50,11 @@
                 this.$refs.input.focus();
 
                 this.focused = true;
+                this.selected = null;
             },
             blur: function() {
                 this.focused = false;
+                this.selected = null;
             },
             push: function() {
                 if (!this.tags.includes(this.tag) && !!this.tag) {
@@ -55,8 +64,18 @@
                 }
             },
             pop: function() {
-                if (!this.tag) {
-                    this.tags.pop();
+                if (!this.tag && this.tags.length) {
+                    if (this.confirm) {
+                        if (this.selected != null) {
+                            this.tags.pop();
+
+                            this.selected = null;
+                        } else {
+                            this.selected = this.tags.length - 1;
+                        }
+                    } else {
+                        this.tags.pop();
+                    }
                 }
             },
             splice: function(index) {
@@ -96,13 +115,21 @@
 
                 &-animation {
                     &-enter-active {
-                        transition: all .4s;
+                        transition: all .2s;
                     }
 
                     &-enter {
                         opacity: 0;
-                        transform: translateY(-15px);
+                        transform: translateY(10px);
                     }
+                    &-enter-to {
+                        opacity: 1;
+                        transform: translateY(-2px);
+                    }
+                }
+                &.active {
+                    color: #fff;
+                    background-color: #2196f3;
                 }
 
                 .icon {

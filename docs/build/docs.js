@@ -9947,7 +9947,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(10), "");
 
 // module
-exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #f9f9f9;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #383838;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #999;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          font-size: 14px;\n          margin-right: 20px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    font-size: 14px;\n    padding: 20px 0;\n    line-height: 20px;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer a {\n      color: #2e64c3;\n      text-decoration: none;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #4b86ec;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #fff;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #fff;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          font-size: 14px;\n          margin-right: 20px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .wrapper .content .group .tagify-container {\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    font-size: 14px;\n    padding: 20px 0;\n    line-height: 20px;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer a {\n      color: #2e64c3;\n      text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -10034,6 +10034,15 @@ module.exports = function listToStyles(parentId, list) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -10041,7 +10050,8 @@ module.exports = function listToStyles(parentId, list) {
     data: function () {
         return {
             message: 'Docs',
-            tags: ['Moscow', 'Almaty', 'London']
+            tags: ['Moscow', 'Almaty', 'London'],
+            tags_confirm: ['Russia', 'Kazakhstan']
         };
     },
     components: {
@@ -10137,7 +10147,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.push([module.i, "@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);", ""]);
 
 // module
-exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25rem 0;\n  background-color: #fff;\n  transition: border-color .4s;\n  border-bottom: 2px solid #efefef;\n}\n.tagify-container .tagify-tag, .tagify-container .tagify-input {\n    float: left;\n    font-size: 14px;\n    font-family: 'Helvetica', sans-serif;\n}\n.tagify-container .tagify-tag {\n    color: #444;\n    height: 32px;\n    cursor: pointer;\n    padding: 0 12px;\n    line-height: 32px;\n    border-radius: 16px;\n    margin: 2px 12px 2px 0;\n    background-color: #efefef;\n}\n.tagify-container .tagify-tag-animation-enter-active {\n      transition: all .4s;\n}\n.tagify-container .tagify-tag-animation-enter {\n      opacity: 0;\n      transform: translateY(-15px);\n}\n.tagify-container .tagify-tag .icon {\n      font-size: 14px;\n      margin-left: 6px;\n      font-style: normal;\n      font-weight: normal;\n      padding: 6px 0 6px 6px;\n}\n.tagify-container .tagify-tag .icon:hover {\n        font-weight: bold;\n}\n.tagify-container .tagify-input {\n    padding: 0;\n    height: 32px;\n    border: none;\n    outline: none;\n    margin: 2px 0;\n}\n.tagify-container .tagify:after {\n    content: '';\n    clear: both;\n    display: block;\n}\n.tagify-container.active {\n    border-color: #2196f3;\n}\n", ""]);
+exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25rem 0;\n  background-color: #fff;\n  transition: border-color .4s;\n  border-bottom: 2px solid #efefef;\n}\n.tagify-container .tagify-tag, .tagify-container .tagify-input {\n    float: left;\n    font-size: 14px;\n    font-family: 'Helvetica', sans-serif;\n}\n.tagify-container .tagify-tag {\n    color: #444;\n    height: 32px;\n    cursor: pointer;\n    padding: 0 12px;\n    line-height: 32px;\n    border-radius: 16px;\n    margin: 2px 12px 2px 0;\n    background-color: #efefef;\n}\n.tagify-container .tagify-tag-animation-enter-active {\n      transition: all .2s;\n}\n.tagify-container .tagify-tag-animation-enter {\n      opacity: 0;\n      transform: translateY(10px);\n}\n.tagify-container .tagify-tag-animation-enter-to {\n      opacity: 1;\n      transform: translateY(-2px);\n}\n.tagify-container .tagify-tag.active {\n      color: #fff;\n      background-color: #2196f3;\n}\n.tagify-container .tagify-tag .icon {\n      font-size: 14px;\n      margin-left: 6px;\n      font-style: normal;\n      font-weight: normal;\n      padding: 6px 0 6px 6px;\n}\n.tagify-container .tagify-tag .icon:hover {\n        font-weight: bold;\n}\n.tagify-container .tagify-input {\n    padding: 0;\n    height: 32px;\n    border: none;\n    outline: none;\n    margin: 2px 0;\n}\n.tagify-container .tagify:after {\n    content: '';\n    clear: both;\n    display: block;\n}\n.tagify-container.active {\n    border-color: #2196f3;\n}\n", ""]);
 
 // exports
 
@@ -10167,12 +10177,15 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function () {
         return {
             tag: null,
-            focused: false
+            focused: false,
+            selected: null
         };
     },
 
@@ -10184,6 +10197,10 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
         tags: {
             type: Array,
             default: () => []
+        },
+        confirm: {
+            type: Boolean,
+            default: false
         }
     },
 
@@ -10192,9 +10209,11 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
             this.$refs.input.focus();
 
             this.focused = true;
+            this.selected = null;
         },
         blur: function () {
             this.focused = false;
+            this.selected = null;
         },
         push: function () {
             if (!this.tags.includes(this.tag) && !!this.tag) {
@@ -10204,8 +10223,18 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
             }
         },
         pop: function () {
-            if (!this.tag) {
-                this.tags.pop();
+            if (!this.tag && this.tags.length) {
+                if (this.confirm) {
+                    if (this.selected != null) {
+                        this.tags.pop();
+
+                        this.selected = null;
+                    } else {
+                        this.selected = this.tags.length - 1;
+                    }
+                } else {
+                    this.tags.pop();
+                }
             }
         },
         splice: function (index) {
@@ -10238,7 +10267,10 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, _vm._l((_vm.tags), function(tag, index) {
     return _c('span', {
       key: index,
-      staticClass: "tagify-tag"
+      staticClass: "tagify-tag",
+      class: {
+        active: _vm.selected === index
+      }
     }, [_vm._v(_vm._s(tag)), _c('i', {
       staticClass: "icon ion-ios-close-outline",
       on: {
@@ -10271,6 +10303,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         if (!('button' in $event) && _vm._k($event.keyCode, "delete", [8, 46])) { return null; }
         _vm.pop($event)
       },
+      "focus": _vm.focus,
       "blur": _vm.blur,
       "input": function($event) {
         if ($event.target.composing) { return; }
@@ -10309,7 +10342,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "tags": _vm.tags,
       "placeholder": "Type your tags here"
     }
-  })], 1)])]), _vm._m(1)])
+  }), _c('code', [_vm._v("<tagify :tags='tags' placeholder='Type your tags here'></tagify>")])], 1), _c('div', {
+    staticClass: "group"
+  }, [_c('h2', [_vm._v(" Confirm removing")]), _c('tagify', {
+    attrs: {
+      "tags": _vm.tags_confirm,
+      "placeholder": "Type your tags here",
+      "confirm": "confirm"
+    }
+  }), _c('code', [_vm._v("<tagify :tags='tags' placeholder='Type your tags here' confirm></tagify>")])], 1)])]), _vm._m(1)])
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
