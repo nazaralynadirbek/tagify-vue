@@ -2,7 +2,7 @@
     .container
         p {{ message }}
 
-        tagify
+        tagify(placeholder='Type there for us')
 </template>
 
 <script>
