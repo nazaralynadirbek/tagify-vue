@@ -4,7 +4,8 @@
   "description": "Vue 2.0 component",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "build:docs": "webpack"
   },
   "repository": {
     "type": "git",
