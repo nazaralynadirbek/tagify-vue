@@ -28,10 +28,11 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.entry = './src/app.js';
+    module.exports.entry = './src/index.js';
 
     module.exports.output = {
         publicPath: '/dist/',
+        libraryTarget: 'umd',
         filename: 'tagify-vue.min.js',
         path: path.resolve(__dirname, './dist')
     };

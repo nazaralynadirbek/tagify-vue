@@ -10054,6 +10054,8 @@ module.exports = function listToStyles(parentId, list) {
 //
 //
 //
+//
+//
 
 
 
@@ -10388,7 +10390,12 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
       "href": "https://github.com/naznadmn/tagify-vue",
       "target": "_blank"
     }
-  }, [_vm._v("Available on GitHub")])])])])])
+  }, [_vm._v("Available on GitHub")])]), _c('li', [_c('a', {
+    attrs: {
+      "href": "https://www.npmjs.com/package/tagify-vue",
+      "target": "_blank"
+    }
+  }, [_vm._v("NPM")])])])])])
 },function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "footer"

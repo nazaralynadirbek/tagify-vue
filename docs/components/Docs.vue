@@ -11,6 +11,8 @@
                     ul.list
                         li
                             a(href='https://github.com/naznadmn/tagify-vue', target='_blank') Available on GitHub
+                        li
+                            a(href='https://www.npmjs.com/package/tagify-vue', target='_blank') NPM
             .content
                 .group
                     h2  Basic component
