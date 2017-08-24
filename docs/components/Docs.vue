@@ -10,15 +10,7 @@
                 .bottom
                     ul.list
                         li
-                            a(class="github-button",
-                              href="https://github.com/naznadmn/tagify-vue",
-                              data-show-count="true",
-                              aria-label="Star naznadmn/tagify-vue on GitHub") Star
-                        li
-                            a(class="github-button",
-                              href="https://github.com/naznadmn",
-                              data-show-count="true",
-                              aria-label="Follow @naznadmn on GitHub") Follow @naznadmn
+                            a(href='https://github.com/naznadmn/tagify-vue', target='_blank') Available on GitHub
             .content
                 .group
                     h2  Basic component
@@ -34,7 +26,17 @@
 
                     code &#60;tagify :tags='tags' placeholder='Type your tags here' confirm&#62;&#60;/tagify&#62;
         .footer
-            p inspired in #[a(href='https://github.com/Gbuomprisco/ngx-chips', target='_blank') ngx-chips]
+            ul.list
+                li
+                    a(class="github-button",
+                      href="https://github.com/naznadmn/tagify-vue",
+                      data-show-count="true",
+                      aria-label="Star naznadmn/tagify-vue on GitHub") Star
+                li
+                    a(class="github-button",
+                      href="https://github.com/naznadmn",
+                      data-show-count="true",
+                      aria-label="Follow @naznadmn on GitHub") Follow @naznadmn
 </template>
 
 <script>
@@ -100,9 +102,25 @@
                         font-size: 0;
 
                         li {
-                            font-size: 14px;
-                            margin-right: 20px;
+                            margin-right: 10px;
                             display: inline-block;
+
+                            a {
+                                color: #fff;
+                                font-size: 14px;
+                                cursor: pointer;
+                                padding: 7px 12px;
+                                border-radius: 4px;
+                                display: inline-block;
+                                text-decoration: none;
+                                border: 1px solid #fff;
+                                background-color: rgba(255, 255, 255, .15);
+
+                                &:hover {
+                                    transition: all .4s;
+                                    background-color: transparent;
+                                }
+                            }
 
                             &:last-child {
                                 margin-right: 0;
@@ -133,15 +151,22 @@
         .footer {
             height: 20px;
             color: #383838;
-            font-size: 14px;
             padding: 20px 0;
-            line-height: 20px;
             text-align: center;
             background-color: #efefef;
 
-            a {
-                color: #2e64c3;
-                text-decoration: none;
+            .list {
+                font-size: 0;
+
+                li {
+                    font-size: 14px;
+                    margin-right: 20px;
+                    display: inline-block;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }

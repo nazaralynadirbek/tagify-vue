@@ -9947,7 +9947,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(10), "");
 
 // module
-exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #4b86ec;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #fff;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #fff;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          font-size: 14px;\n          margin-right: 20px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .wrapper .content .group .tagify-container {\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    font-size: 14px;\n    padding: 20px 0;\n    line-height: 20px;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer a {\n      color: #2e64c3;\n      text-decoration: none;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #4b86ec;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #fff;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #fff;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          margin-right: 10px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li a {\n            color: #fff;\n            font-size: 14px;\n            cursor: pointer;\n            padding: 7px 12px;\n            border-radius: 4px;\n            display: inline-block;\n            text-decoration: none;\n            border: 1px solid #fff;\n            background-color: rgba(255, 255, 255, 0.15);\n}\n.container .wrapper .header .bottom .list li a:hover {\n              transition: all .4s;\n              background-color: transparent;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .wrapper .content .group .tagify-container {\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    padding: 20px 0;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer .list {\n      font-size: 0;\n}\n.container .footer .list li {\n        font-size: 14px;\n        margin-right: 20px;\n        display: inline-block;\n}\n.container .footer .list li:last-child {\n          margin-right: 0;\n}\n", ""]);
 
 // exports
 
@@ -10004,6 +10004,8 @@ module.exports = function listToStyles(parentId, list) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tagify_vue__ = __webpack_require__(13);
+//
+//
 //
 //
 //
@@ -10369,6 +10371,17 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
   }, [_c('ul', {
     staticClass: "list"
   }, [_c('li', [_c('a', {
+    attrs: {
+      "href": "https://github.com/naznadmn/tagify-vue",
+      "target": "_blank"
+    }
+  }, [_vm._v("Available on GitHub")])])])])])
+},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "footer"
+  }, [_c('ul', {
+    staticClass: "list"
+  }, [_c('li', [_c('a', {
     staticClass: "github-button",
     attrs: {
       "href": "https://github.com/naznadmn/tagify-vue",
@@ -10382,16 +10395,7 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
       "data-show-count": "true",
       "aria-label": "Follow @naznadmn on GitHub"
     }
-  }, [_vm._v("Follow @naznadmn")])])])])])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "footer"
-  }, [_c('p', [_vm._v("inspired in "), _c('a', {
-    attrs: {
-      "href": "https://github.com/Gbuomprisco/ngx-chips",
-      "target": "_blank"
-    }
-  }, [_vm._v("ngx-chips")])])])
+  }, [_vm._v("Follow @naznadmn")])])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
