@@ -473,7 +473,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
     el: '#app',
-    render: h => h(__WEBPACK_IMPORTED_MODULE_1__components_Docs_vue__["a" /* default */])
+    render: function render(h) {
+        return h(__WEBPACK_IMPORTED_MODULE_1__components_Docs_vue__["a" /* default */]);
+    }
 });
 
 /***/ }),
@@ -481,7 +483,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process, global) {/*!
+/* WEBPACK VAR INJECTION */(function(process, global) {var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*!
  * Vue.js v2.4.2
  * (c) 2014-2017 Evan You
  * Released under the MIT License.
@@ -519,7 +523,7 @@ function isPrimitive(value) {
  * is a JSON-compliant type.
  */
 function isObject(obj) {
-  return obj !== null && typeof obj === 'object';
+  return obj !== null && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object';
 }
 
 var _toString = Object.prototype.toString;
@@ -548,7 +552,7 @@ function isValidArrayIndex(val) {
  * Convert a value to a string that is actually rendered.
  */
 function toString(val) {
-  return val == null ? '' : typeof val === 'object' ? JSON.stringify(val, null, 2) : String(val);
+  return val == null ? '' : (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'object' ? JSON.stringify(val, null, 2) : String(val);
 }
 
 /**
@@ -702,14 +706,14 @@ function noop(a, b, c) {}
 /**
  * Always return false.
  */
-var no = function (a, b, c) {
+var no = function no(a, b, c) {
   return false;
 };
 
 /**
  * Return same value
  */
-var identity = function (_) {
+var identity = function identity(_) {
   return _;
 };
 
@@ -930,13 +934,13 @@ var formatComponentName = null; // work around flow check
 if (process.env.NODE_ENV !== 'production') {
   var hasConsole = typeof console !== 'undefined';
   var classifyRE = /(?:^|[-_])(\w)/g;
-  var classify = function (str) {
+  var classify = function classify(str) {
     return str.replace(classifyRE, function (c) {
       return c.toUpperCase();
     }).replace(/[-_]/g, '');
   };
 
-  warn = function (msg, vm) {
+  warn = function warn(msg, vm) {
     var trace = vm ? generateComponentTrace(vm) : '';
 
     if (config.warnHandler) {
@@ -946,13 +950,13 @@ if (process.env.NODE_ENV !== 'production') {
     }
   };
 
-  tip = function (msg, vm) {
+  tip = function tip(msg, vm) {
     if (hasConsole && !config.silent) {
       console.warn("[Vue tip]: " + msg + (vm ? generateComponentTrace(vm) : ''));
     }
   };
 
-  formatComponentName = function (vm, includeFile) {
+  formatComponentName = function formatComponentName(vm, includeFile) {
     if (vm.$root === vm) {
       return '<Root>';
     }
@@ -967,7 +971,7 @@ if (process.env.NODE_ENV !== 'production') {
     return (name ? "<" + classify(name) + ">" : "<Anonymous>") + (file && includeFile !== false ? " at " + file : '');
   };
 
-  var repeat = function (str, n) {
+  var repeat = function repeat(str, n) {
     var res = '';
     while (n) {
       if (n % 2 === 1) {
@@ -981,7 +985,7 @@ if (process.env.NODE_ENV !== 'production') {
     return res;
   };
 
-  var generateComponentTrace = function (vm) {
+  var generateComponentTrace = function generateComponentTrace(vm) {
     if (vm._isVue && vm.$parent) {
       var tree = [];
       var currentRecursiveSequence = 0;
@@ -1063,7 +1067,7 @@ if (inBrowser) {
 // this needs to be lazy-evaled because vue may be required before
 // vue-server-renderer can set VUE_ENV
 var _isServer;
-var isServerRendering = function () {
+var isServerRendering = function isServerRendering() {
   if (_isServer === undefined) {
     /* istanbul ignore if */
     if (!inBrowser && typeof global !== 'undefined') {
@@ -1113,10 +1117,10 @@ var nextTick = function () {
   /* istanbul ignore if */
   if (typeof Promise !== 'undefined' && isNative(Promise)) {
     var p = Promise.resolve();
-    var logError = function (err) {
+    var logError = function logError(err) {
       console.error(err);
     };
-    timerFunc = function () {
+    timerFunc = function timerFunc() {
       p.then(nextTickHandler).catch(logError);
       // in problematic UIWebViews, Promise.then doesn't completely break, but
       // it can get stuck in a weird state where callbacks are pushed into the
@@ -1138,14 +1142,14 @@ var nextTick = function () {
     observer.observe(textNode, {
       characterData: true
     });
-    timerFunc = function () {
+    timerFunc = function timerFunc() {
       counter = (counter + 1) % 2;
       textNode.data = String(counter);
     };
   } else {
     // fallback to setTimeout
     /* istanbul ignore next */
-    timerFunc = function () {
+    timerFunc = function timerFunc() {
       setTimeout(nextTickHandler, 0);
     };
   }
@@ -1264,9 +1268,9 @@ var arrayMethods = Object.create(arrayProto);['push', 'pop', 'shift', 'unshift',
   def(arrayMethods, method, function mutator() {
     var args = [],
         len = arguments.length;
-    while (len--) args[len] = arguments[len];
-
-    var result = original.apply(this, args);
+    while (len--) {
+      args[len] = arguments[len];
+    }var result = original.apply(this, args);
     var ob = this.__ob__;
     var inserted;
     switch (method) {
@@ -1676,7 +1680,7 @@ strats.provide = mergeDataOrFn;
 /**
  * Default strategy.
  */
-var defaultStrat = function (parentVal, childVal) {
+var defaultStrat = function defaultStrat(parentVal, childVal) {
   return childVal === undefined ? parentVal : childVal;
 };
 
@@ -1920,7 +1924,7 @@ function assertType(value, type) {
   var valid;
   var expectedType = getType(type);
   if (simpleCheckRE.test(expectedType)) {
-    valid = typeof value === expectedType.toLowerCase();
+    valid = (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === expectedType.toLowerCase();
   } else if (expectedType === 'Object') {
     valid = isPlainObject(value);
   } else if (expectedType === 'Array') {
@@ -1966,10 +1970,10 @@ if (process.env.NODE_ENV !== 'production') {
   var perf = inBrowser && window.performance;
   /* istanbul ignore if */
   if (perf && perf.mark && perf.measure && perf.clearMarks && perf.clearMeasures) {
-    mark = function (tag) {
+    mark = function mark(tag) {
       return perf.mark(tag);
     };
-    measure = function (name, startTag, endTag) {
+    measure = function measure(name, startTag, endTag) {
       perf.measure(name, startTag, endTag);
       perf.clearMarks(startTag);
       perf.clearMarks(endTag);
@@ -1986,7 +1990,7 @@ if (process.env.NODE_ENV !== 'production') {
   var allowedGlobals = makeMap('Infinity,undefined,NaN,isFinite,isNaN,' + 'parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,' + 'Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,' + 'require' // for Webpack/Browserify
   );
 
-  var warnNonPresent = function (target, key) {
+  var warnNonPresent = function warnNonPresent(target, key) {
     warn("Property or method \"" + key + "\" is not defined on the instance but " + "referenced during render. Make sure to declare reactive data " + "properties in the data option.", target);
   };
 
@@ -2075,7 +2079,7 @@ prototypeAccessors.child.get = function () {
 
 Object.defineProperties(VNode.prototype, prototypeAccessors);
 
-var createEmptyVNode = function (text) {
+var createEmptyVNode = function createEmptyVNode(text) {
   if (text === void 0) text = '';
 
   var node = new VNode();
@@ -2361,7 +2365,7 @@ function resolveAsyncComponent(factory, baseCtor, context) {
     var contexts = factory.contexts = [context];
     var sync = true;
 
-    var forceRender = function () {
+    var forceRender = function forceRender() {
       for (var i = 0, l = contexts.length; i < l; i++) {
         contexts[i].$forceUpdate();
       }
@@ -2757,7 +2761,7 @@ function mountComponent(vm, el, hydrating) {
   var updateComponent;
   /* istanbul ignore if */
   if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
-    updateComponent = function () {
+    updateComponent = function updateComponent() {
       var name = vm._name;
       var id = vm._uid;
       var startTag = "vue-perf-start:" + id;
@@ -2774,7 +2778,7 @@ function mountComponent(vm, el, hydrating) {
       measure(name + " patch", startTag, endTag);
     };
   } else {
-    updateComponent = function () {
+    updateComponent = function updateComponent() {
       vm._update(vm._render(), hydrating);
     };
   }
@@ -3330,7 +3334,7 @@ function initProps(vm, propsOptions) {
   var isRoot = !vm.$parent;
   // root instance props should be converted
   observerState.shouldConvert = isRoot;
-  var loop = function (key) {
+  var loop = function loop(key) {
     keys.push(key);
     var value = validateProp(key, propsOptions, propsData, vm);
     /* istanbul ignore else */
@@ -3354,8 +3358,9 @@ function initProps(vm, propsOptions) {
     }
   };
 
-  for (var key in propsOptions) loop(key);
-  observerState.shouldConvert = true;
+  for (var key in propsOptions) {
+    loop(key);
+  }observerState.shouldConvert = true;
 }
 
 function initData(vm) {
@@ -3613,7 +3618,7 @@ function createFunctionalComponent(Ctor, propsData, data, context, children) {
   // ensure the createElement function in functional components
   // gets a unique context - this is necessary for correct named slot check
   var _context = Object.create(context);
-  var h = function (a, b, c, d) {
+  var h = function h(a, b, c, d) {
     return createElement(_context, a, b, c, d, true);
   };
   var vnode = Ctor.options.render.call(null, h, {
@@ -3623,7 +3628,7 @@ function createFunctionalComponent(Ctor, propsData, data, context, children) {
     parent: context,
     listeners: data.on || {},
     injections: resolveInject(Ctor.options.inject, context),
-    slots: function () {
+    slots: function slots() {
       return resolveSlots(children, context);
     }
   });
@@ -4026,7 +4031,7 @@ function bindObjectProps(data, tag, value, asProp, isSync) {
         value = toObject(value);
       }
       var hash;
-      var loop = function (key) {
+      var loop = function loop(key) {
         if (key === 'class' || key === 'style' || isReservedAttribute(key)) {
           hash = data;
         } else {
@@ -4045,7 +4050,9 @@ function bindObjectProps(data, tag, value, asProp, isSync) {
         }
       };
 
-      for (var key in value) loop(key);
+      for (var key in value) {
+        loop(key);
+      }
     }
   }
   return data;
@@ -4700,7 +4707,7 @@ var isReservedAttr = makeMap('style,class');
 
 // attributes that should be using props for binding
 var acceptValue = makeMap('input,textarea,option,select');
-var mustUseProp = function (tag, type, attr) {
+var mustUseProp = function mustUseProp(tag, type, attr) {
   return attr === 'value' && acceptValue(tag) && type !== 'button' || attr === 'selected' && tag === 'option' || attr === 'checked' && tag === 'input' || attr === 'muted' && tag === 'video';
 };
 
@@ -4710,15 +4717,15 @@ var isBooleanAttr = makeMap('allowfullscreen,async,autofocus,autoplay,checked,co
 
 var xlinkNS = 'http://www.w3.org/1999/xlink';
 
-var isXlink = function (name) {
+var isXlink = function isXlink(name) {
   return name.charAt(5) === ':' && name.slice(0, 5) === 'xlink';
 };
 
-var getXlinkProp = function (name) {
+var getXlinkProp = function getXlinkProp(name) {
   return isXlink(name) ? name.slice(6, name.length) : '';
 };
 
-var isFalsyAttrValue = function (val) {
+var isFalsyAttrValue = function isFalsyAttrValue(val) {
   return val == null || val === false;
 };
 
@@ -4815,11 +4822,11 @@ var isHTMLTag = makeMap('html,body,base,head,link,meta,style,title,' + 'address,
 // contain child elements.
 var isSVG = makeMap('svg,animate,circle,clippath,cursor,defs,desc,ellipse,filter,font-face,' + 'foreignObject,g,glyph,image,line,marker,mask,missing-glyph,path,pattern,' + 'polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,view', true);
 
-var isPreTag = function (tag) {
+var isPreTag = function isPreTag(tag) {
   return tag === 'pre';
 };
 
-var isReservedTag = function (tag) {
+var isReservedTag = function isReservedTag(tag) {
   return isHTMLTag(tag) || isSVG(tag);
 };
 
@@ -5671,7 +5678,7 @@ function _update(oldVnode, vnode) {
   }
 
   if (dirsWithInsert.length) {
-    var callInsert = function () {
+    var callInsert = function callInsert() {
       for (var i = 0; i < dirsWithInsert.length; i++) {
         callHook$1(dirsWithInsert[i], 'inserted', vnode, oldVnode);
       }
@@ -6310,18 +6317,18 @@ function normalizeEvents(on) {
 
 var target$1;
 
-function add$1(event, handler, once$$1, capture, passive) {
+function add$1(event, _handler, once$$1, capture, passive) {
   if (once$$1) {
-    var oldHandler = handler;
+    var oldHandler = _handler;
     var _target = target$1; // save current target element in closure
-    handler = function (ev) {
+    _handler = function handler(ev) {
       var res = arguments.length === 1 ? oldHandler(ev) : oldHandler.apply(null, arguments);
       if (res !== null) {
-        remove$2(event, handler, capture, _target);
+        remove$2(event, _handler, capture, _target);
       }
     };
   }
-  target$1.addEventListener(event, handler, supportsPassive ? { capture: capture, passive: passive } : capture);
+  target$1.addEventListener(event, _handler, supportsPassive ? { capture: capture, passive: passive } : capture);
 }
 
 function remove$2(event, handler, capture, _target) {
@@ -6498,7 +6505,7 @@ function getStyle(vnode, checkChild) {
 
 var cssVarRE = /^--/;
 var importantRE = /\s*!important$/;
-var setProp = function (el, name, val) {
+var setProp = function setProp(el, name, val) {
   /* istanbul ignore if */
   if (cssVarRE.test(name)) {
     el.style.setProperty(name, val);
@@ -6654,7 +6661,7 @@ function resolveTransition(def$$1) {
     return;
   }
   /* istanbul ignore else */
-  if (typeof def$$1 === 'object') {
+  if ((typeof def$$1 === 'undefined' ? 'undefined' : _typeof(def$$1)) === 'object') {
     var res = {};
     if (def$$1.css !== false) {
       extend(res, autoCssTransition(def$$1.name || 'v'));
@@ -6732,11 +6739,11 @@ function whenTransitionEnds(el, expectedType, cb) {
   }
   var event = type === TRANSITION ? transitionEndEvent : animationEndEvent;
   var ended = 0;
-  var end = function () {
+  var end = function end() {
     el.removeEventListener(event, onEnd);
     cb();
   };
-  var onEnd = function (e) {
+  var onEnd = function onEnd(e) {
     if (e.target === el) {
       if (++ended >= propCount) {
         end();
@@ -7117,7 +7124,7 @@ if (isIE9) {
 var model$1 = {
   inserted: function inserted(el, binding, vnode) {
     if (vnode.tag === 'select') {
-      var cb = function () {
+      var cb = function cb() {
         setSelected(el, binding, vnode.context);
       };
       cb();
@@ -7441,7 +7448,7 @@ var Transition = {
           return oldRawChild;
         }
         var delayedLeave;
-        var performLeave = function () {
+        var performLeave = function performLeave() {
           delayedLeave();
         };
         mergeVNodeHook(data, 'afterEnter', performLeave);
@@ -7907,7 +7914,7 @@ var encodedAttrWithNewLines = /&(?:lt|gt|quot|amp|#10);/g;
 
 // #5992
 var isIgnoreNewlineTag = makeMap('pre,textarea', true);
-var shouldIgnoreFirstNewline = function (tag, html) {
+var shouldIgnoreFirstNewline = function shouldIgnoreFirstNewline(tag, html) {
   return tag && isIgnoreNewlineTag(tag) && html[0] === '\n';
 };
 
@@ -8842,7 +8849,7 @@ var keyCodes = {
 // #4868: modifiers that prevent the execution of the listener
 // need to explicitly return null so that we can determine whether to remove
 // the listener for .once
-var genGuard = function (condition) {
+var genGuard = function genGuard(condition) {
   return "if(" + condition + ")return null;";
 };
 
@@ -9838,6 +9845,8 @@ process.umask = function () {
 /* 6 */
 /***/ (function(module, exports) {
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var g;
 
 // This works in non-strict mode
@@ -9850,7 +9859,7 @@ try {
 	g = g || Function("return this")() || (1, eval)("this");
 } catch (e) {
 	// This works if the window reference is available
-	if (typeof window === "object") g = window;
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
 }
 
 // g can still be undefined, but nothing to do about it...
@@ -10049,7 +10058,7 @@ module.exports = function listToStyles(parentId, list) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    data: function () {
+    data: function data() {
         return {
             message: 'Docs',
             tags: ['Moscow', 'Almaty', 'London'],
@@ -10183,7 +10192,9 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    data: function () {
+    name: 'Tagify',
+
+    data: function data() {
         return {
             tag: null,
             focused: false,
@@ -10198,7 +10209,9 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
         },
         tags: {
             type: Array,
-            default: () => []
+            default: function _default() {
+                return [];
+            }
         },
         confirm: {
             type: Boolean,
@@ -10207,24 +10220,24 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
     },
 
     methods: {
-        focus: function () {
+        focus: function focus() {
             this.$refs.input.focus();
 
             this.focused = true;
             this.selected = null;
         },
-        blur: function () {
+        blur: function blur() {
             this.focused = false;
             this.selected = null;
         },
-        push: function () {
+        push: function push() {
             if (!this.tags.includes(this.tag) && !!this.tag) {
                 this.tags.push(this.tag);
 
                 this.tag = null;
             }
         },
-        pop: function () {
+        pop: function pop() {
             if (!this.tag && this.tags.length) {
                 if (this.confirm) {
                     if (this.selected != null) {
@@ -10239,7 +10252,7 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
                 }
             }
         },
-        splice: function (index) {
+        splice: function splice(index) {
             this.tags.splice(index, 1);
         }
     }

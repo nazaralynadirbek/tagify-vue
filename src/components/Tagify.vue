@@ -22,6 +22,8 @@
 
 <script>
     export default {
+        name: 'Tagify',
+        
         data: function() {
             return {
                 tag: null,

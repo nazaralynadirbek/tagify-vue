@@ -26,3 +26,29 @@ module.exports = {
         }
     }
 }
+
+if (process.env.NODE_ENV === 'production') {
+    module.exports.entry = './src/app.js';
+
+    module.exports.output = {
+        publicPath: '/dist/',
+        filename: 'tagify-vue.min.js',
+        path: path.resolve(__dirname, './dist')
+    };
+
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        }),
+        new webpack.LoaderOptionsPlugin({
+          minimize: true
+        })
+    ])
+}

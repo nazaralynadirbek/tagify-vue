@@ -1,10 +1,11 @@
 {
   "name": "tagify-vue",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Vue 2.0 component",
-  "main": "index.js",
+  "main": "dist/tagify-vue.min.js",
   "scripts": {
     "dev": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack",
     "build:docs": "webpack"
   },
   "repository": {
