@@ -1,6 +1,6 @@
 {
   "name": "tagify-vue",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Vue 2.0 component",
   "main": "index.js",
   "scripts": {
