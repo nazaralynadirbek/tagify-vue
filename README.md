@@ -3,7 +3,7 @@
 > Tagify Component for Vue 2.0
 
 <p align="center">
-    ![preview](preview.png)
+    <img src="preview.png" alt="Preview"/>
 </p>
 
 ## Installation
