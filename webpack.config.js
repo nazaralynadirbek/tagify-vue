@@ -28,7 +28,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.entry = './src/index.js';
+    module.exports.entry = './src/app.js';
 
     module.exports.output = {
         publicPath: '/dist/',

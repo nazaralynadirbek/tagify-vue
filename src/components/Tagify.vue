@@ -23,7 +23,7 @@
 <script>
     export default {
         name: 'Tagify',
-        
+
         data: function() {
             return {
                 tag: null,
@@ -39,7 +39,7 @@
             },
             tags: {
                 type: Array,
-                default: () => []
+                default: () => ['Astana', 'Almaty', 'Aqtobe']
             },
             confirm: {
                 type: Boolean,

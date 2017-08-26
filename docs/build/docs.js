@@ -9956,7 +9956,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(10), "");
 
 // module
-exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .wrapper {\n    height: calc(100% - 60px);\n}\n.container .wrapper .header {\n      text-align: center;\n      margin-bottom: 40px;\n      padding-bottom: 40px;\n      background-color: #4b86ec;\n}\n.container .wrapper .header .top {\n        color: #fff;\n        padding: 12px 0;\n        font-size: 14px;\n        font-weight: 300;\n        background-color: #2e64c3;\n}\n.container .wrapper .header .top a {\n          color: #fff;\n          opacity: .6;\n          text-decoration: none;\n}\n.container .wrapper .header .middle {\n        padding: 40px 0;\n}\n.container .wrapper .header .middle h1 {\n          color: #fff;\n          font-weight: 400;\n}\n.container .wrapper .header .middle p {\n          color: #fff;\n          font-size: 14px;\n          font-weight: 300;\n}\n.container .wrapper .header .bottom .list {\n        font-size: 0;\n}\n.container .wrapper .header .bottom .list li {\n          margin-right: 10px;\n          display: inline-block;\n}\n.container .wrapper .header .bottom .list li a {\n            color: #fff;\n            font-size: 14px;\n            cursor: pointer;\n            padding: 7px 12px;\n            border-radius: 4px;\n            display: inline-block;\n            text-decoration: none;\n            border: 1px solid #fff;\n            background-color: rgba(255, 255, 255, 0.15);\n}\n.container .wrapper .header .bottom .list li a:hover {\n              transition: all .4s;\n              background-color: transparent;\n}\n.container .wrapper .header .bottom .list li:last-child {\n            margin-right: 0;\n}\n.container .wrapper .content {\n      width: 500px;\n      margin: 0 auto;\n}\n.container .wrapper .content .group {\n        margin-bottom: 40px;\n}\n.container .wrapper .content .group h2 {\n          color: #383838;\n          font-size: 16px;\n          font-weight: 400;\n          margin-bottom: 20px;\n}\n.container .wrapper .content .group .tagify-container {\n          margin-bottom: 20px;\n}\n.container .footer {\n    height: 20px;\n    color: #383838;\n    padding: 20px 0;\n    text-align: center;\n    background-color: #efefef;\n}\n.container .footer .list {\n      font-size: 0;\n}\n.container .footer .list li {\n        font-size: 14px;\n        margin-right: 20px;\n        display: inline-block;\n}\n.container .footer .list li:last-child {\n          margin-right: 0;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n  height: 100%;\n}\n.container .header {\n    text-align: center;\n    padding-bottom: 40px;\n    background-color: #4b86ec;\n}\n.container .header .top {\n      color: #fff;\n      padding: 12px 0;\n      font-size: 14px;\n      font-weight: 300;\n      background-color: #2e64c3;\n}\n.container .header .top a {\n        color: #fff;\n        opacity: .6;\n        text-decoration: none;\n}\n.container .header .middle {\n      padding: 40px 0;\n}\n.container .header .middle h1 {\n        color: #fff;\n        font-weight: 400;\n}\n.container .header .middle p {\n        color: #fff;\n        font-size: 14px;\n        font-weight: 300;\n}\n.container .header .bottom .list {\n      font-size: 0;\n}\n.container .header .bottom .list li {\n        margin-right: 10px;\n        display: inline-block;\n}\n.container .header .bottom .list li a {\n          color: #fff;\n          font-size: 14px;\n          cursor: pointer;\n          padding: 7px 12px;\n          border-radius: 4px;\n          display: inline-block;\n          text-decoration: none;\n          border: 1px solid #fff;\n          background-color: rgba(255, 255, 255, 0.15);\n}\n.container .header .bottom .list li a:hover {\n            transition: all .4s;\n            background-color: transparent;\n}\n.container .header .bottom .list li:last-child {\n          margin-right: 0;\n}\n.container .content {\n    width: 500px;\n    margin: 0 auto;\n    padding: 40px 0;\n}\n.container .content .group {\n      margin-bottom: 40px;\n}\n.container .content .group h2 {\n        color: #383838;\n        font-size: 16px;\n        font-weight: 400;\n        margin-bottom: 20px;\n}\n.container .content .group code {\n        display: block;\n        font-size: 14px;\n        padding: 12px 16px;\n        margin-bottom: 10px;\n        font-weight: normal;\n        background-color: #f0f0f0;\n        font-family: 'Lato', sans-serif;\n}\n.container .content .group code:last-child {\n          margin-bottom: 0;\n}\n.container .content .group:last-child {\n        margin-bottom: 0;\n}\n", ""]);
 
 // exports
 
@@ -10043,28 +10043,13 @@ module.exports = function listToStyles(parentId, list) {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function data() {
         return {
-            message: 'Docs',
-            tags: ['Moscow', 'Almaty', 'London'],
-            tags_confirm: ['Russia', 'Kazakhstan']
+            message: 'Docs'
         };
     },
     components: {
@@ -10212,7 +10197,7 @@ exports.push([module.i, "\n.tagify-container {\n  cursor: text;\n  padding: 0.25
         tags: {
             type: Array,
             default: function _default() {
-                return [];
+                return ['Astana', 'Almaty', 'Aqtobe'];
             }
         },
         confirm: {
@@ -10348,26 +10333,22 @@ if (false) {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_c('div', {
-    staticClass: "wrapper"
   }, [_vm._m(0), _c('div', {
     staticClass: "content"
-  }, [_c('div', {
+  }, [_vm._m(1), _c('div', {
     staticClass: "group"
   }, [_c('h2', [_vm._v(" Basic component")]), _c('tagify', {
     attrs: {
-      "tags": _vm.tags,
       "placeholder": "Type your tags here"
     }
-  }), _c('code', [_vm._v("<tagify :tags='tags' placeholder='Type your tags here'></tagify>")])], 1), _c('div', {
+  })], 1), _c('div', {
     staticClass: "group"
   }, [_c('h2', [_vm._v(" Confirm removing")]), _c('tagify', {
     attrs: {
-      "tags": _vm.tags_confirm,
       "placeholder": "Type your tags here",
       "confirm": "confirm"
     }
-  }), _c('code', [_vm._v("<tagify :tags='tags' placeholder='Type your tags here' confirm></tagify>")])], 1)])]), _vm._m(1)])
+  })], 1)])])
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -10398,24 +10379,8 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
   }, [_vm._v("NPM")])])])])])
 },function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "footer"
-  }, [_c('ul', {
-    staticClass: "list"
-  }, [_c('li', [_c('a', {
-    staticClass: "github-button",
-    attrs: {
-      "href": "https://github.com/naznadmn/tagify-vue",
-      "data-show-count": "true",
-      "aria-label": "Star naznadmn/tagify-vue on GitHub"
-    }
-  }, [_vm._v("Star")])]), _c('li', [_c('a', {
-    staticClass: "github-button",
-    attrs: {
-      "href": "https://github.com/naznadmn",
-      "data-show-count": "true",
-      "aria-label": "Follow @naznadmn on GitHub"
-    }
-  }, [_vm._v("Follow @naznadmn")])])])])
+    staticClass: "group"
+  }, [_c('h2', [_vm._v("Installation")]), _c('code', [_vm._v("npm install --save tagify-vue")]), _c('code', [_vm._v("import Tagify from 'tagify-vue'")])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
