@@ -23,6 +23,10 @@
                 tagify(placeholder='Type your tags here')
 
             .group
+                h2  Disabled component
+                tagify(placeholder='Type your tags here', disabled)
+
+            .group
                 h2  Confirm removing
                 tagify(placeholder='Type your tags here',
                        confirm)
