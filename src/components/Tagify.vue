@@ -44,6 +44,10 @@
             confirm: {
                 type: Boolean,
                 default: false,
+            },
+            disabled: {
+                type: Boolean,
+                default: false,
             }
         },
 
@@ -59,14 +63,14 @@
                 this.selected = null;
             },
             push: function() {
-                if (!this.tags.includes(this.tag) && !!this.tag) {
+                if (!this.disabled && !this.tags.includes(this.tag) && !!this.tag) {
                     this.tags.push(this.tag);
 
                     this.tag = null;
                 }
             },
             pop: function() {
-                if (!this.tag && this.tags.length) {
+                if (!this.disabled && !this.tag && this.tags.length) {
                     if (this.confirm) {
                         if (this.selected != null) {
                             this.tags.pop();
@@ -81,7 +85,9 @@
                 }
             },
             splice: function(index) {
-                this.tags.splice(index, 1);
+                if (!this.disabled) {
+                    this.tags.splice(index, 1);
+                }
             }
         }
     }
